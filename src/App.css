@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Tilt+Neon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+ .size{
+  font-size: 135%;
+  font-weight: 600;
+  background: -webkit-linear-gradient( #fcf6f6, #65e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.size:hover{
+  font-size: 135%;
+  font-weight: 600;
+  background: -webkit-linear-gradient( #dfdcdc, #0a5635);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.bg-image {
+  opacity: 0.9; 
+}
+
+
+.container {
+  position: absolute;
+  margin-top: 10%;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  left: 2%;
+  font-size: 200%;
+  color: rgb(255, 255, 255);
+}
+
+.cont{
+  margin-top: 18%;
+}
+
+.container1 {
+  position: absolute;
+  top: 110%;
+  left: 6%;
+  font-size: 200%;
+  color: black;
+  font-family: 'Montserrat';
+}  
+
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .logo-image {
+      margin: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+    .size {
+      font-size: 1.2rem;
+    }
+  }
+  @media (max-width: 576px) {
+    .navbar {
+      font-size: auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .logo-image {
+      margin: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+
+    .size {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width< 576px) {
+    .navbar {
+      font-size: auto;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .logo-image {
+      margin: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    
+
+    .size {
+      font-size: 0.6rem;
+    }
+  }
+  
+
+  .hov {
+   font-size: 100%;
+   background: -webkit-linear-gradient( #efeded, #65e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+  
+
+  .hov:hover{
+   font-size: 100%;
+   background: -webkit-linear-gradient( #dfdcdc, #0bfa93);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.under:hover::after {
+  content: "";
+  display: block;
+  height: 0.1vh;
+  width: 80%;
+  margin: 0 auto; 
+  background-color: #ffffff;
+}
+
+
+  
+  

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card{
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat';
+    color: azure;
+}
+
+
+.hovv{
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out;
+}
+
+.hovv:hover{
+    transform: scale(1.05);
+    transition: transform 0.4s ease-in-out;
+}

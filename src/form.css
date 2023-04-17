@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,800&display=swap");
+
+
+
+.frm {
+  color: rgb(0, 0, 0);
+  font-family: "Montserrat";
+  padding-left: 15%;
+  font-weight: 800;
+}
+
+.ptag{
+  font-size: 250%;
+
+}
+
+
+
+input {
+  color: black;
+  font-size: 100%;
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  min-height: 8vh;
+  min-width: 33%;
+  margin-bottom: 2vh;
+}
+
+textarea {
+  padding: 0.5% 1.5% 0.5% 1.5%;
+  min-height: 18vh;
+  min-width: 33%;
+}
+
+button {
+  font-size: 150%;
+  min-height: 8vh;
+  width: 33%;
+  margin-bottom: 10%;
+}
+
+.help {
+  font-size: 120%;
+  margin-bottom: 1%;
+}
