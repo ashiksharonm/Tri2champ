@@ -1,0 +1,121 @@
+.form-container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px;
+  border: 2px solid #000000;
+  
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+}
+
+.form-padding{
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+  @media only screen and (min-width: 200px) and (max-width: 768px) {
+    .form-container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background: -webkit-linear-gradient( #053f7e,#000f1f,);
+        border: 2px solid #c300ff;
+        
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+      .form-padding{
+        padding-top: 15%;
+        padding-bottom: 15%;
+      }
+  }
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    background-color: -webkit-linear-gradient( left,#ffffff,#000f1f,) !important;
+  }
+  
+  .top {
+    color:aliceblue;
+    margin-bottom: 3%;
+    margin-left: -90%;
+    margin-top: 3%;
+  }
+
+ 
+
+  .mtop {
+    color:aliceblue;
+    margin-bottom: 5px;
+    margin-left: -85%;
+    margin-top: 3%;
+  }
+
+  @media (max-width: 450px) {
+    .top {
+      color:aliceblue;
+      margin-bottom: 3%;
+      margin-left: -80%;
+      margin-top: 3%;
+    }
+  
+   
+  
+    .mtop {
+      color:aliceblue;
+      margin-bottom: 5px;
+      margin-left: -75%;
+      margin-top: 3%;
+    }
+    
+  }
+  
+  .iinput {
+    padding: 10px;
+    
+    border: 1px solid #181a1b;
+    border-radius: 5px;
+    font-size: 2vh;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+  }
+
+  .iinput:focus
+ {
+  background-color: #0d0e0f;
+}
+
+.iinput:hover {
+  border: 3px solid#a200ff;
+}
+  
+  .bbutton {
+    padding: 10px 20px;
+    color: #080808;
+    border: 2px solid #181e1f;
+    border-radius: 5px;
+    font-size: 2vh;
+    cursor: pointer;
+    margin-top: 2%;
+    width: 100%;
+  }
+  
+  .bbutton:hover {
+    border: 2px solid #353c38;
+  }
+
+  .iinput::placeholder {
+    color: rgb(0, 0, 0);
+  }
+  
+
+  .tiltneon {
+    font-family: "Tilt neon";
+    font-weight: 400;
+  }
+  
+  
+  
