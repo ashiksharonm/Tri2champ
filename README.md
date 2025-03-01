@@ -4,7 +4,12 @@ Tri2Champ is a modern sports website built using React.js and Firebase, providin
 
 🚀 Features
 
-✅ User & Admin Authentication – Secure login and access control with Firebase Auth✅ Event Creation & Management – Admins can create and manage events effortlessly✅ Seamless Registration – Users can sign up for events without hassle✅ Stripe Payments Integration – Secure online payments for event registration✅ Modern UI with TailwindCSS – Responsive, clean, and intuitive design✅ Triathlon-Focused Experience – Tailored for triathlon, swimming, and endurance sports events
+✅ User & Admin Authentication – Secure login and access control with Firebase Auth
+✅ Event Creation & Management – Admins can create and manage events effortlessly
+✅ Seamless Registration – Users can sign up for events without hassle
+✅ Stripe Payments Integration – Secure online payments for event registration
+✅ Modern UI with TailwindCSS – Responsive, clean, and intuitive design
+✅ Triathlon-Focused Experience – Tailored for triathlon, swimming, and endurance sports events
 
 🛠️ Installation
 
