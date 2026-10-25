@@ -1,4 +1,4 @@
-import React, { useState, setState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./signin2.scss";
 import "./gallery.css";
 import Footer from "./footer";
