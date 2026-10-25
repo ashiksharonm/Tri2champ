@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import { useState,useEffect } from "react";
-import logo from "./logo1.png";
+
 import Login from "./Login/LoginApp";
 import PhoneVer from "./Login/phonever";
 import Section0 from "./section0";
@@ -10,8 +10,7 @@ import Section2 from "./section2";
 import Form from "./form";
 import Image from "./image";
 import Footer from "./footer";
-import { scroller } from "react-scroll";
-import Card from "./card";
+
 import Team from "./Team";
 import { Helmet } from "react-helmet";
 import Preloader from "./pre";
@@ -28,18 +27,11 @@ import NavbarM from "./nav2";
 import HomeEvent from "./event";
 import UserEvent from "./User/event";
 import Eventreg from "./User/eventreg";
-import HomeGallery from "./gallery";
+
 import EventPage from "./User/EventPage";
 import EventDescription from "./User/regev";
 
 function App() {
-  const scrollTo = (id) => {
-    scroller.scrollTo(id, {
-      duration: 800,
-      delay: -2,
-      smooth: "easeInOutQuart",
-    });
-  };
 
   const [load, updateLoad] = useState(true);
 

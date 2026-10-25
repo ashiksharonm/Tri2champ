@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import "./gallery.css";
 import Footer from "./footer";
 import { Helmet } from "react-helmet";
-import { initializeApp } from 'firebase/app';
-import firebase from 'firebase/compat/app';
+
 import "firebase/compat/firestore";
-import { getStorage, ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
+import { getStorage, ref, listAll, getDownloadURL } from "firebase/storage";
 import NavbarM from "./nav";
 import { app } from "../firebase";
 

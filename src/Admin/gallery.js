@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./gallery.css";
 import Footer from "./footer";
-import logo from "../logo1.png";
+
 import { Helmet } from "react-helmet";
 import "@appnest/masonry-layout";
-import { initializeApp } from 'firebase/app';
-import firebase from 'firebase/compat/app';
+
 import "firebase/compat/firestore";
 import {getStorage, ref, uploadBytes, listAll, getDownloadURL} from "firebase/storage";
 import Navbar from "./nav";
@@ -57,12 +56,11 @@ const AdminGallery = () => {
       });
   }, []);
   useEffect(() => {
-    if(localStorage.getItem("authUID")!="6BMmVtW9yhSU4T3CHbkRo9thNv43"&&localStorage.getItem("authUID")!="8kSMYknJfcZm4NKkBEp0pr0YM9M2"&&localStorage.getItem("authUID")!="Bq1ZwulC7XM57m5iQVZS78J9lOK2"&&localStorage.getItem("authUID")!=""&&localStorage.getItem("authUID")!="")
+    if(localStorage.getItem("authUID")!=="6BMmVtW9yhSU4T3CHbkRo9thNv43"&&localStorage.getItem("authUID")!=="8kSMYknJfcZm4NKkBEp0pr0YM9M2"&&localStorage.getItem("authUID")!=="Bq1ZwulC7XM57m5iQVZS78J9lOK2"&&localStorage.getItem("authUID")!==""&&localStorage.getItem("authUID")!=="")
     {
       window.location.replace("/App");
     }
   }, []);
-  
 
   return (
     <>

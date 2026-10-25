@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./signin2.scss";
 import "./gallery.css";
-import Footer from "./footer";
+
 import { getDatabase } from "firebase/database";
-import { initializeApp } from "firebase/app";
-import { ref, push, child, update, onValue } from "firebase/database";
+
+import { ref, update, onValue } from "firebase/database";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./nav";
 import { app } from "../firebase";
@@ -25,7 +25,6 @@ function Eventreg() {
   const [weight, setWeight] = useState(null);
   const [city, setCity] = useState(null);
   const [state, setState] = useState(null);
-  const [file, setFile] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   function validate() {
@@ -156,7 +155,6 @@ function Eventreg() {
         ClubName: clubName,
       };
 
-      const newUserRef = push(ref(database, "users/"));
       const newUserId = localStorage.getItem("authUID");
 
       const updates = {};
@@ -195,19 +193,10 @@ function Eventreg() {
   }, []);
 
   useEffect(() => {
-    if (localStorage.getItem("authUID") == "") {
+    if (localStorage.getItem("authUID") === "") {
       window.location.replace("/App");
     }
   }, []);
-
-  const redirect = () => {
-    window.location.href = "/payment";
-  };
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setFile(file);
-  };
 
   return (
     <div>

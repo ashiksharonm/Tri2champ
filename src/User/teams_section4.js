@@ -25,7 +25,7 @@ function teams_section4() {
           </p>
         </div>
         <div className="cycle col-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pr-4">
-          <img src={cycle2} className="img-fluid object-fit-cover" />
+          <img alt="" src={cycle2} className="img-fluid object-fit-cover" />
         </div>
       </div>
     </div>

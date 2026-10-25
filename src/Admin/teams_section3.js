@@ -7,7 +7,7 @@ function teams_section3() {
     <div className="bg-teal-100" style={{}} id="teams_sec1">
       <div className="para">
         <div className="cycle col-3 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-          <img src={cycle1} className="img-fluid object-fit-cover" />
+          <img alt="" src={cycle1} className="img-fluid object-fit-cover" />
         </div>
         <div className="text col-9 col-md-9 col-xl-9 col-xxl-9 col-lg-9">
           <div className="glitter pt-3 pb-2 bg-gradient-to-r text-cyan-500 text-blue-500">

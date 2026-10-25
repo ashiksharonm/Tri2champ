@@ -7,7 +7,7 @@ function Section1() {
   return (
     <div className=" bg-blue-100  " id="sec1"  style={{fontSize: "120%"}}>
       <div className="ccc pad text-center col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-        <img
+        <img alt=""
           src={cy}
           className="my-image   rounded mx-auto d-block img-thumbnail text-center col-8 col-sm-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5"
         />

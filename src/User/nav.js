@@ -2,17 +2,15 @@ import React, { useState, useEffect } from "react";
 import logo from "../logo1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown, faBars } from "@fortawesome/free-solid-svg-icons";
-import { scroller } from "react-scroll";
+
 import UserProfile from "./signform";
 import UserTeam from "./Team";
 import UserGallery from "./gallery";
 import UserEvent from "./event";
 import Tilt from "react-parallax-tilt";
-import UserPage from "./UserPage";
-import { Link } from "react-router-dom";
+
 import Cookies from "js-cookie";
 import "./nav.css";
-
 
 const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -35,20 +33,8 @@ const Navbar = () => {
     window.location.replace("./");
   };
 
-  const scrollTo = (id) => {
-    scroller.scrollTo(id, {
-      duration: 800,
-      delay: -2,
-      smooth: "easeInOutQuart",
-    });
-  };
-
   const toggleMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
-  };
-
-  const hideMobileMenu = () => {
-    setShowMobileMenu(false);
   };
 
   const handleResize = () => {

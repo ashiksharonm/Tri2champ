@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import emailjs from "emailjs-com";
 import "./form.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Cookies from "js-cookie";
 
 function Form() {
   const [name, setName] = useState("");
