@@ -25,7 +25,7 @@ function Section2() {
           </p>
         </div>
         <div className="cycle col-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 pr-4">
-          <img src={Running1} className="img-fluid object-fit-cover" />
+          <img alt="" src={Running1} className="img-fluid object-fit-cover" />
         </div>
       </div>
     </div>

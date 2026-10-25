@@ -16,7 +16,7 @@ const PhoneVer = () =>
   const [ph, setPh] = useState("");
   const [loading, setLoading] = useState(false);
   const [showOTP, setShowOTP] = useState(false);
-  const [user, setUser] = useState(null);
+  const [user] = useState(null);
 
   function onCaptchVerify() {
     if (!window.recaptchaVerifier) {
@@ -81,7 +81,7 @@ const PhoneVer = () =>
         ) : (
           <div className="bg-blue-950  flex flex-col gap-4 rounded-lg p-4 in_box">
             <div id="logo" className="mx-auto d-block w-full h-full  logo_box">
-              <img src={logo} className="logo_con"/>
+              <img alt="" src={logo} className="logo_con"/>
             </div>
             <h1 className="text-center leading-normal text-white font-medium text-3xl mb-6">
               Welcome to <br /> Tri2Champ

@@ -23,7 +23,7 @@ function Section2() {
           </p>
         </div>
         <div className="cycle">
-          <img src={cycling} style={{ height: '700px', width: '3000px' }}  />
+          <img alt="" src={cycling} style={{ height: '700px', width: '3000px' }}  />
         </div>
       </div>
     </div>

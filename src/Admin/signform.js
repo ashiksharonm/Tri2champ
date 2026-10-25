@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./signin.scss";
-import logo from "../logo1.png";
-import Footer from "./footer";
+
 import { getDatabase } from "firebase/database";
 import { initializeApp } from "firebase/app";
-import { ref, push, child, update, onValue } from "firebase/database";
+import { ref, update, onValue } from "firebase/database";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./nav";
 import styles from "./signin.module.scss";
 import { firebaseConfig } from "../firebase";
-
 
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
@@ -90,7 +88,7 @@ function AdminProfile() {
   }, []);
 
   useEffect(() => {
-    if(localStorage.getItem("authUID")!="6BMmVtW9yhSU4T3CHbkRo9thNv43"&&localStorage.getItem("authUID")!="8kSMYknJfcZm4NKkBEp0pr0YM9M2"&&localStorage.getItem("authUID")!="Bq1ZwulC7XM57m5iQVZS78J9lOK2"&&localStorage.getItem("authUID")!=""&&localStorage.getItem("authUID")!="")
+    if(localStorage.getItem("authUID")!=="6BMmVtW9yhSU4T3CHbkRo9thNv43"&&localStorage.getItem("authUID")!=="8kSMYknJfcZm4NKkBEp0pr0YM9M2"&&localStorage.getItem("authUID")!=="Bq1ZwulC7XM57m5iQVZS78J9lOK2"&&localStorage.getItem("authUID")!==""&&localStorage.getItem("authUID")!=="")
     {
       window.location.replace("/App");
     }
@@ -137,7 +135,6 @@ function AdminProfile() {
         State: state,
       };
 
-      const newUserRef = push(ref(database, "users/"));
       const newUserId = localStorage.getItem("authUID");
 
       const updates = {};

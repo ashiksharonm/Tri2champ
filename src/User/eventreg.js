@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./signin2.scss";
 import "./gallery.css";
-import Footer from "./footer";
+
 import { getDatabase } from "firebase/database";
-import { initializeApp } from "firebase/app";
-import { ref, push, child, update, onValue ,off} from "firebase/database";
+
+import { ref, update, onValue, off } from "firebase/database";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./nav";
 import { app } from "../firebase";
-import { Helmet } from "react-helmet";
-import mailjet from"node-mailjet";
-import logo from "../logo1.png";
-import axios from "axios";
 
 const database = getDatabase(app);
 
@@ -30,7 +26,6 @@ function Eventreg() {
   const [city, setCity] = useState(null);
   const [state, setState] = useState(null);
   const [price, setPrice] = useState(0);
-  const [file, setFile] = useState(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const[pay,setPay]=useState(0);
   const eventName = localStorage.getItem("Event");
@@ -162,13 +157,12 @@ function Eventreg() {
     };
   }, []);
   useEffect(()=>{
-    if(pay==1)
+    if(pay===1)
     {
       ticket();
       setPay(0);
     }
   },[pay]);
-  
 
   const handleParticipantEntry = () => {
     if (validate()) {
@@ -188,9 +182,6 @@ function Eventreg() {
         ClubName: clubName,
       };
 
-      const newUserRef = push(
-        ref(database, "Event/" + eventName + "/Participants")
-      );
       const newUserId = localStorage.getItem("authUID");
 
       const updates = {};
@@ -311,19 +302,10 @@ axios
   }, []);
 
   useEffect(() => {
-    if (localStorage.getItem("authUID") == "") {
+    if (localStorage.getItem("authUID") === "") {
       window.location.replace("/App");
     }
   }, []);
-
-  const redirect = () => {
-    window.location.href = "/payment";
-  };
-
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    setFile(file);
-  };
 
   return (
     <div>
@@ -498,7 +480,6 @@ axios
 }
 
 export default Eventreg;
-
 
 // service_ybikfdq
 // {/* <img src=${logo} alt="Tri2Champ Logo" />

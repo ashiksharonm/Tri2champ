@@ -2,21 +2,8 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./nav";
 import { initializeApp } from "firebase/app";
 import Dropzone from "react-dropzone";
-import {
-  getStorage,
-  ref as reff,
-  uploadBytes,
-  listAll,
-  getDownloadURL,
-} from "firebase/storage";
-import {
-  getDatabase,
-  ref,
-  onValue,
-  push,
-  update,
-  remove,
-} from "firebase/database";
+import { getStorage, ref as reff, uploadBytes } from "firebase/storage";
+import { getDatabase, ref, onValue, push, update } from "firebase/database";
 import Footer from "./footer";
 import { firebaseConfig } from "../firebase";
 
@@ -35,15 +22,11 @@ const AdminEvent = () => {
   const [field3, setField3] = useState("");
   const [field4, setField4] = useState("");
   const [field5, setField5] = useState("");
-  const [image, setImage] = useState(null);
-  const [imageUrl, setImageUrl] = useState("");
   const [success, setSuccess] = useState("");
-  const [text, setText] = useState("");
-  const [styles, setStyles] = useState({});
   const [isUploading, setIsUploading] = useState(false);
 
   useEffect(() => {
-    if(localStorage.getItem("authUID")!="6BMmVtW9yhSU4T3CHbkRo9thNv43"&&localStorage.getItem("authUID")!="8kSMYknJfcZm4NKkBEp0pr0YM9M2"&&localStorage.getItem("authUID")!="Bq1ZwulC7XM57m5iQVZS78J9lOK2"&&localStorage.getItem("authUID")!=""&&localStorage.getItem("authUID")!="")
+    if(localStorage.getItem("authUID")!=="6BMmVtW9yhSU4T3CHbkRo9thNv43"&&localStorage.getItem("authUID")!=="8kSMYknJfcZm4NKkBEp0pr0YM9M2"&&localStorage.getItem("authUID")!=="Bq1ZwulC7XM57m5iQVZS78J9lOK2"&&localStorage.getItem("authUID")!==""&&localStorage.getItem("authUID")!=="")
     {
       window.location.replace("/App");
     }
@@ -67,18 +50,6 @@ const AdminEvent = () => {
     fetchMenuData();
   }, []);
 
-  const handleTextChange = (event) => {
-    setText(event.target.value);
-  };
-
-  const handleStyleChange = (event) => {
-    const { name, value } = event.target;
-    setStyles((prevStyles) => ({
-      ...prevStyles,
-      [name]: value
-    }));
-  };
-  
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
@@ -145,27 +116,11 @@ const AdminEvent = () => {
     setField5(item.field5);
   };
 
-  const handleDeleteItem = (itemId) => {
-    const menuRef = ref(database, "Event/"+itemName);
-    // const eventRef=ref(database,"Event/List/"+itemName.id+"/");
-    // remove(eventRef)
-    remove(menuRef)
-      // .then(() => {
-      //   setMenuItems((prevMenuItems) =>
-      //     prevMenuItems.filter((item) => item.id !== itemId)
-      //   );
-      // })
-      // .catch((error) => {
-      //   console.log("Error deleting item:", error);
-      // });
-  };
-
   const handleFileUpload = async (files) => {
     try {
       const file = files[0];
       const storageRef = reff(storage, `/Event/${itemName}/${file.name}`);
       await uploadBytes(storageRef, file);
-      const downloadURL = await getDownloadURL(storageRef);
       console.log("File uploaded successfully.");
       setSuccess(true);
       setTimeout(() => {setSuccess(false);setIsUploading(false)}, 3000);
@@ -174,22 +129,6 @@ const AdminEvent = () => {
       setIsUploading(false);
     }
   };
-
-  const handleFileUpload2 = async (filess) => {
-    try {
-      const file2 = filess[0];
-      const storageRef2 = reff(storage, `event2/${file2.name}`);
-      await uploadBytes(storageRef2, file2);
-      const downloadURL2 = await getDownloadURL(storageRef2);
-      console.log("File uploaded successfully.");
-      setSuccess(true);
-      setTimeout(() => setSuccess(false), 3000);
-    } catch (error) {
-      console.error("Error uploading file:", error);
-    }
-  };
-
-  
 
   return (
     <>

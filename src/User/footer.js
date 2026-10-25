@@ -55,48 +55,48 @@ function Footer() {
               <a
                 href="https://www.facebook.com/groups/545209797657546/?ref=share&paipv=0&eav=AfZZNXp5BRnZR42ez3jNFf0dbbDlFC63ktr8TgXCeNmR6cDO16oSVEhP6aI8xnfrPaI&_rdr"
                 className="social-icon-link text-zinc-50  pr-5 hover:text-orange-500"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
               <a
                 href="https://www.instagram.com/tri_2_champ/"
                 className="social-icon-link text-zinc-50 pr-5 hover:text-orange-500"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
                 href="https://api.whatsapp.com/send/?phone=9677179907&text&type=phone_number&app_absent=0"
                 className="social-icon-link icon-color text-zinc-50 pr-5 hover:text-orange-500"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faWhatsapp} />
               </a>
               <a
                 href="mailto:team.tri2champ@gmail.com"
                 className="social-icon-link icon-color text-zinc-50 pr-5 hover:text-orange-500"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={Mail} />
               </a>
               <a
                 href="https://www.google.com/maps/search/?api=1&query=13.0167188,80.1756658"
                 className="social-icon-link icon-color  hover:text-orange-500"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faMapMarkerAlt} />
               </a>
             </div>
 
             <div className="footer-links lg:text-xl text-sm col-12 col-sm-11 pt-4 text-end">
-              <a href={pdf1} className="hover:text-orange-500 pb-2" target="_blank">
+              <a href={pdf1} className="hover:text-orange-500 pb-2" target="_blank" rel="noopener noreferrer">
                 Cancellation and Refund Policy
               </a>
-              <a href={pdf} className="hover:text-orange-500 pb-2" target="_blank">
+              <a href={pdf} className="hover:text-orange-500 pb-2" target="_blank" rel="noopener noreferrer">
                 Terms and Privacy Policy
               </a>
-              <a href="tel:9677179907" className="hover:text-orange-500 pb-2" target="_blank">
+              <a href="tel:9677179907" className="hover:text-orange-500 pb-2" target="_blank" rel="noopener noreferrer">
                 Call Us
               </a>
             </div>
@@ -144,7 +144,7 @@ function Footer() {
               <a
                 href="https://www.facebook.com/groups/545209797657546/?ref=share&paipv=0&eav=AfZZNXp5BRnZR42ez3jNFf0dbbDlFC63ktr8TgXCeNmR6cDO16oSVEhP6aI8xnfrPaI&_rdr"
                 className="social-icons sicons "
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
@@ -152,21 +152,21 @@ function Footer() {
               <a
                 href="https://www.instagram.com/tri_2_champ/"
                 className="social-icons sicons"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
                 href="https://api.whatsapp.com/send/?phone=9677179907&text&type=phone_number&app_absent=0"
                 className="social-icons sicons"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faWhatsapp} />
               </a>
               <a
                 href="mailto:team.tri2champ@gmail.com"
                 className="social-icons "
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={Mail} />
               </a>
@@ -180,7 +180,7 @@ function Footer() {
             <a
               href="https://www.google.com/maps/search/?api=1&query=13.0167188,80.1756658"
               className="hover:underline hover:text-orange-500"
-              target="_blank"
+              target="_blank" rel="noopener noreferrer"
             >
               <p className="pb-4">
                 No. 2/19, P.P.Kovil street, Mettu Colony, Manapakkam, Chennai -
@@ -191,14 +191,14 @@ function Footer() {
               <a
                 href={pdf1}
                 className="hover:text-orange-500 hover:underline pb-2"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 Cancellation and Refund Policy
               </a>
               <a
                 href={pdf}
                 className="hover:text-orange-500 hover:underline pb-2"
-                target="_blank"
+                target="_blank" rel="noopener noreferrer"
               >
                 Terms and Privacy Policy
               </a>

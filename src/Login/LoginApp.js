@@ -1,6 +1,6 @@
 import React from "react";
 import "./LoginApp.css";
-import { onAuthStateChanged } from "firebase/auth";
+
 import { signInWithGoogle } from "./Firebase";
 import {
   getAuth,
@@ -26,10 +26,6 @@ function Login() {
   const [successs, setSuccesss] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
@@ -87,7 +83,6 @@ function Login() {
           });
       });
   };
-  const currPath = window.location.pathname;
   return (
     <>
     <Helmet>
@@ -104,7 +99,7 @@ function Login() {
               <a href="/">
                 {" "}
                 <Tilt>
-                  <img src={logo} className="mx-auto d-block "/>
+                  <img alt="" src={logo} className="mx-auto d-block "/>
                 </Tilt>
               </a>
             </div>

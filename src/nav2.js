@@ -1,13 +1,12 @@
 import React, { useState,useEffect } from "react";
 import logo from "./logo1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { scroller } from "react-scroll";
 import Tilt from "react-parallax-tilt";
 import "./nav.css";
 
 const NavbarM = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
 
@@ -23,9 +22,6 @@ const NavbarM = () => {
     setShowMobileMenu(!showMobileMenu);
   };
 
-  const hideMobileMenu = () => {
-    setShowMobileMenu(false);
-  };
 
   const handleResize = () => {
     setIsMobileView(window.innerWidth <= 767);

@@ -10,7 +10,7 @@ import {
 import "./regev.css";
 import Navbar from "./nav";
 import Eventreg from "./eventreg";
-import { Link } from "react-router-dom";
+
 import Footer from "./footer";
 import { firebaseConfig } from "../firebase";
 
@@ -18,10 +18,8 @@ const firebaseApp = initializeApp(firebaseConfig);
 const database = getDatabase(firebaseApp);
 const storage = getStorage(firebaseApp);
 
-
 const EventDescription = () => {
   const [images, setImages] = useState([]);
-  const [currentEventIndex, setCurrentEventIndex] = useState(0);
   const event =localStorage.getItem("Event");
   const imagesRef = storageRef(storage, "Event/"+event+"/");
   var menuItems=JSON.parse(localStorage.getItem(event));
@@ -69,7 +67,7 @@ const EventDescription = () => {
                   <div  className="event-item">
                     <div className="image-container">
                       {imageUrl && (
-                        <img
+                        <img alt=""
                           src={imageUrl}
                           className="event-image hovv "
                         />

@@ -1,21 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { initializeApp } from "firebase/app";
+
 import { getDatabase, ref, onValue } from "firebase/database";
-import {
-  getStorage,
-  ref as storageRef,
-  listAll,
-  getDownloadURL,
-} from "firebase/storage";
+import { getStorage, ref as storageRef, getDownloadURL } from "firebase/storage";
 import "./EventPage.css";
 import Navbar from "./nav";
-import { Link } from "react-router-dom";
+
 import Footer from "./footer";
 import { app as firebaseApp } from "../firebase";
 
 const database = getDatabase(firebaseApp);
 const storage = getStorage(firebaseApp);
-const imagesRef = storageRef(storage, "event");
 
 const EventItem = ({ item, imageUrl, handleView }) => (
   <div
@@ -34,7 +28,7 @@ const EventItem = ({ item, imageUrl, handleView }) => (
     </h1>
     {imageUrl && (
       <div>
-        <img
+        <img alt=""
           src={imageUrl}
           className="hhov  mx-auto d-block eventpic m-4 "
           style={{ width: "90%" }}

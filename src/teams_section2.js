@@ -22,7 +22,7 @@ function teams_section2() {
         <div
           className="cycle col-5 col-md-5 col-lg-5 col-xl-5 col-xxl-5 pr-3"
         >
-          <img
+          <img alt=""
             src={swim_2}
             className="img-fluid object-fit-cover"
           />

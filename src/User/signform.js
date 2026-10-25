@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./signin.scss";
-import logo from "../logo1.png";
-import Footer from "./footer";
+
 import { getDatabase } from "firebase/database";
-import { initializeApp } from "firebase/app";
-import { ref, push, child, update, onValue } from "firebase/database";
+
+import { ref, update, onValue } from "firebase/database";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./nav";
-import styles from "./signin.module.scss";
+
 import {
   getStorage,
   ref as storageRef,
@@ -21,7 +20,6 @@ import { Helmet } from "react-helmet";
 const database = getDatabase(firebaseApp);
 const storage = getStorage(firebaseApp);
 
-
 function UserProfile() {
   const [firstName, setFirstName] = useState(null);
   const [lastName, setLastName] = useState(null);
@@ -34,7 +32,7 @@ function UserProfile() {
   const [isEditMode, setIsEditMode] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [profileImage, setProfileImage] = useState(null);
-  const [imageUploaded, setImageUploaded] = useState(false);
+  const [, setImageUploaded] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
 
   function validate() {
@@ -80,7 +78,6 @@ function UserProfile() {
     return true;
   }
 
-  
   useEffect(() => {
     const authUID = localStorage.getItem("authUID");
     if (authUID) {
@@ -146,14 +143,6 @@ function UserProfile() {
       window.location.replace("/App");
     }
   }, []);
-
-  const handleEdit = () => {
-    setIsEditMode(true);
-  };
-
-  const handleCancel = () => {
-    setIsEditMode(false);
-  };
 
   const toggleEditMode = () => {
     setIsEditMode(!isEditMode);

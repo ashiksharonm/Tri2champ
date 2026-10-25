@@ -2,28 +2,16 @@ import React, { useState,useEffect } from "react";
 import logo from "./logo1.png";
 import "./nav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faBars } from "@fortawesome/free-solid-svg-icons";
-import { scroller } from "react-scroll";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 import Tilt from "react-parallax-tilt";
 
 const NavbarL = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [isMobileView, setIsMobileView] = useState(false);
 
-  const scrollTo = (id) => {
-    scroller.scrollTo(id, {
-      duration: 800,
-      delay: -2,
-      smooth: "easeInOutQuart",
-    });
-  };
-
   const toggleMobileMenu = () => {
     setShowMobileMenu(!showMobileMenu);
-  };
-
-  const hideMobileMenu = () => {
-    setShowMobileMenu(false);
   };
 
   const handleResize = () => {
@@ -115,6 +103,5 @@ const NavbarL = () => {
       </div>
     );
   }
-
 
 export default NavbarL;

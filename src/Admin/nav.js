@@ -1,10 +1,10 @@
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../logo1.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
 import { scroller } from "react-scroll";
 import AdminProfile from "./signform";
-import Event from "./event";
+
 import AdminTeam from "./Team";
 import AdminGallery from "./gallery";
 import AdminEvent from "./event";
